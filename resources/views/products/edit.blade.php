@@ -9,33 +9,34 @@
 </head>
 
 <body>
-    <H1>Create a Product</H1>
-    <form method="post" action="{{ route('product.store') }}">
+    <H1>Edit a Product
+    </H1>
+    <form method="post" action="{{ route('product.update', ['product' => $product]) }}">
         @csrf
-        @method('post')
+        @method('PUT')
         <div>
             <label for="Name">Name:</label>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Name" value="{{ $product->name }}">
 
         </div>
         <br>
 
         <div>
             <label for="Qty">Qty:</label>
-            <input type="text" name="qty" placeholder="Qty">
+            <input type="text" name="qty" placeholder="Qty" value="{{ $product->qty }}">
         </div>
         <br>
         <div>
             <label for="Price">Price:</label>
-            <input type="text" name="price" placeholder="Price">
+            <input type="text" name="price" placeholder="Price" value="{{ $product->price }}">
         </div>
         <br>
         <div>
             <label for="description">Description:</label>
-            <input type="text" name="description" placeholder="Description">
+            <input type="text" name="description" placeholder="Description" value="{{ $product->description }}">
         </div>
         <br>
-        <input type="submit" value="save a new product">
+        <input type="submit" value="Update">
 
     </form>
 </body>
