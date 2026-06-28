@@ -194,4 +194,8 @@ unset($__errorArgs, $__bag); ?>
 
 
 
+
+
+
+
 <?php /**PATH C:\Users\Hm\Desktop\crud-app\resources\views/products/create.blade.php ENDPATH**/ ?>
